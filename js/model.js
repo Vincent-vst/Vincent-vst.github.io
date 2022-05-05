@@ -33,7 +33,7 @@ loader.load('../assets/3D/Mask2.glb', function(gltf){
 // light test 
 const light = new THREE.DirectionalLight(0xffffff, 1); 
 light.position.set(2,2,2); 
-light.intensity=1;
+light.intensity=0.7;
 scene.add(light); 
 const spotLight1 = new THREE.SpotLight( 0xff00aa );
 spotLight1.position.set( 7, 2, 2 );

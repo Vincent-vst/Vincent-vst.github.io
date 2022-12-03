@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Metropolis{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <h3> <a href="{{ path('home') }}">Metropolis</a></h3> 
+            <div class='menu'>
+                <p>About</p>
+                <p>Add Movie</p>
+                <p>Contact</p>
+            </div>
+        </header>
+
+        <div id = 'form_panel' class='gradient_border'>
+            
+            <h1>Ajouter un film</h1>
+
+            {{ form_start(formFilm) }}
+                <div class='nom'>{{form_row(formFilm.nom)}}</div>
+                <div class='note_parent'>
+                    <div class='note'>{{form_row(formFilm.note)}}</div>
+                    <p>(1-10)</p>
+                </div>
+                <div class='button'>{{form_row(formFilm.submitForm)}}</div>
+            {{ form_end(formFilm) }}
+
+            {#{formFilm.description}#}
+            
+        </div>
+    </body>
+
+
+</html>

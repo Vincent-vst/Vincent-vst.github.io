@@ -1,0 +1,107 @@
+$bg : #fee6ce
+$darkbg : #eecaa8
+$title : #eab992
+$level-name : #ac8369
+
+@font-face 
+    font-family: "Kanit"
+    src: url("../assets/fonts/Kanit-black.ttf");
+    font-weight: bold; 
+
+@font-face 
+    font-family: "Kanit"
+    src: url("../assets/fonts/Kanit-Bold.ttf");
+    font-weight: normal; 
+
+@font-face 
+    font-family: "Kanit"
+    src: url("../assets/fonts/Kanit-Thin.ttf");
+    font-weight: lighter; 
+
+@font-face 
+    font-family: "upheat";
+    src: url("../assets/fonts/upheavtt.ttf");
+
+@font-face 
+    font-family: "pixellari" ;
+    src: url("../assets/fonts/Pixellari.ttf");
+
+
+
+* 
+    margin : 0
+    padding : 0
+
+
+body  
+    background-color: $bg
+
+#main 
+    // border : 1px solid red
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items : center
+    justify-content: center
+
+    h3 
+        color : $title
+        margin-bottom: 3vh
+        font-family: upheat
+        font-size: 4em
+        letter-spacing: .2rem
+
+
+    .snake-panel
+        height : 80vh
+        width : 70vw
+        background: $darkbg
+        border-radius: 20px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        padding : 0 50px 0 50px
+
+        @media screen and (min-width: 768px) 
+            width : 50vw
+        
+        a
+            img
+                height: 80px
+                width: auto
+                filter: drop-shadow(5px 5px 0px #d99378)
+            
+            p 
+                text-align: center
+                font-family: Kanit
+                color : $level-name
+            
+        #gameCanvas
+            // border : 1px solid red
+            position: absolute 
+            z-index: 2
+            border-radius: 20px
+
+        
+        #score 
+            position : absolute
+            z-index: 2
+            margin-left : 45vw
+            font-family: Kanit
+            font-size: 2em
+            font-weight: normal
+            color : $level-name
+
+    .description 
+        h5 
+            margin-top : 3vh
+            font-family: pixellari
+            color : $title 
+            font-size: 1.8em
+            font-weight: normal
+        
+        p 
+            font-family: Kanit
+            color : $title 
+            text-align: center

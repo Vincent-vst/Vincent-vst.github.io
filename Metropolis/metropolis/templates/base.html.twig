@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Metropolis{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <h3>Metropolis</h3> 
+            <div class='menu'>
+                <p>About</p>
+                <p>Stats</p>
+                <p><a href='{{ path('upload') }}'>Import CSV</a></p>
+            </div>
+        </header>
+        <div id='main'>
+            <div class='title'>
+                <div class='text'>
+                    <h3>Metropolis, more than a film library</h1>
+                    <div class='description'>Metropolis is a film database that use OMDB api and the symfony framework.</div>
+                    <div class='button'>
+                        <a href="{{ path('form') }}">Ajouter un film</a>
+                    </div>
+                </div>
+                <div class='image'>
+                    <img src='images/model3.png'>
+                </div>
+            </div>
+            <div class='line_parent'>
+                <div class='line'></div>
+            </div>
+            <div class='film_parent'>
+                <div id='films'>
+                    {% for film in films %}
+                        <div class='film_item'>
+                            <img src='images/model2.png'>
+                            <h3><a href="{{ path('description', {'id':film.Id}) }}">{{ film.getNom() }}</a></h3>
+                            <p>Note : {{ film.getNote() }}</p>
+                            <!-- <p>Description : {#{ film.getDescription() }#}</p> -->
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class='text_parent'>
+                    <div class='text_description'>
+                        <h3>Expandable database</h3>
+                        <p>Click on the movies to see its rank, author and a detailed description</p>
+                        {# <img src='images/model1.png' class='image_description'> #}
+                        <span><div><- scroll me</div></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class='left_footer'>
+                <p>author : vincent</p>
+            </div>
+            <div class='right_footer'>
+                <div class='icon'><img src='images/icon1.png'></div>
+                <div class='icon'><img src='images/icon2.png'></div>
+                <div class='icon'><img src='images/icon3.png'></div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div id="main">
+      <h3>SNAKE BYTE</h3>
+      <div class="snake-panel">
+        <a class="button" onclick="level(1)"><img src="assets/images/snake-yellow.svg"><p>level 1</p></a>
+        <a class="button" onclick="level(2)"><img src="assets/images/snake-green.svg"><p>level 2</p></a>
+        <a class="button" onclick="level(3)"><img src="assets/images/snake-blue.svg"><p>level 3</p></a>
+        <a class="button" onclick="level(4)"><img src="assets/images/snake-pink.svg"><p>level 4</p></a>
+        <a class="button" onclick="level(5)"><img src="assets/images/snake-purple.svg"><p>level 5</p></a>
+
+        <canvas id="gameCanvas" width="300" height="300"></canvas> 
+        <div id="score">0</div>
+
+      </div>
+      <div class="description">
+        <h5>A MINIMAL JS SNAKE GAME</h5>
+        <p>VINCENT - AURIANE - DORIAN</p>
+      </div>
+
+      <script src="js/snake.js"></script>
+      <script src="js/index.js"></script>
+    </div>
+
+  </body>
+
+</html>

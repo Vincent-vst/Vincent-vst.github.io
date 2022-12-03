@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Metropolis{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <h3>Metropolis</h3> 
+            <div class='menu'>
+                <p>About</p>
+                <p>Stats</p>
+                <p><a href='{{ path('upload') }}'>Import CSV</a></p>
+            </div>
+        </header>
+        <div>
+            {% for film in films %}
+                {{ film.getNom()}}
+                {{ film.getNote() }}
+            {% endfor %}
+        </div>
+    </body>
+</html>

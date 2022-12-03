@@ -1,0 +1,129 @@
+*
+    margin : 0 
+    padding: 0
+
+$background : #d3c3fc
+$yellow : #ffea81
+$blue : #6cdee2
+$pink : #ffa3ac
+$beige : #fdcb9e
+
+@font-face
+    font-family : "RobotoMono"
+    src : url('./assets/fonts/RobotoMono-Regular.ttf')
+    font-weight : normal
+
+@font-face 
+    font-family: "RobotoMono"
+    src: url('./assets/fonts/RobotoMono-Medium.ttf')
+    font-weight : bold
+
+    
+
+body 
+    background-color : $background
+
+
+main 
+    display : flex 
+    height : 100vh
+    justify-content : center 
+    align-items : center
+    flex-direction : column
+
+    //-----------main page----------  
+
+    h2 
+        margin-bottom : 80px
+        font-family : 'RobotoMono'
+        font-weight : bold
+
+    .categorie 
+        display : flex
+        width : 60%
+        justify-content : space-around
+        
+        a
+            text-decoration : none
+            transition : 0.3s
+
+            img 
+                height : 80px
+
+        
+
+            p 
+                color : black
+                text-align : center
+                font-family : 'RobotoMono'
+
+            &:hover 
+                filter: drop-shadow(5px 5px 10px rgba(64, 39, 66, 0.36))
+
+       
+
+    //-----------bird page----------  
+
+    .card 
+        border : 1px solid red
+        height : 30vh
+        width : 40vw
+        display : flex
+        justify-content : center
+        align-items : center
+        flex-direction : column
+        // background: rgba( 255, 255, 255, 0.3 )
+        // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
+        // backdrop-filter: blur( 4px )
+        // -webkit-backdrop-filter: blur( 4px )
+        // border-radius: 10px
+        // border: 1px solid rgba( 255, 255, 255, 0.18 )
+        // /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.24)
+        border-radius: 16px
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+        backdrop-filter: blur(6.7px)
+        -webkit-backdrop-filter: blur(6.7px)
+        border: 1px solid rgba(255, 255, 255, 0.6)
+
+
+        .submit 
+            margin-top : 20px
+            margin-bottom : 20px
+
+
+            input[type=text]
+                border : 0
+                border-radius : 10px
+                height : 20px
+                padding-left : 10px
+
+            button 
+                border-radius : 10px
+                height : 20px
+                width : 100px
+                border : 0
+
+        .result 
+            display : flex 
+            width : 100%
+            justify-content : center
+
+            p 
+                font-family : "RobotoMono"
+
+            button 
+                border-radius : 10px
+                width : 100px
+                border : 0
+                height : 20px
+
+        #bird-next 
+            color : $pink 
+
+        #image-src
+            // border : 1px solid red 
+            height : 60%
+            width : 60% 
+            object-fit: contain
+

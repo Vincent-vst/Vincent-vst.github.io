@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Kanit";
+  src: url("../assets/fonts/Kanit-black.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Kanit";
+  src: url("../assets/fonts/Kanit-Bold.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Kanit";
+  src: url("../assets/fonts/Kanit-Thin.ttf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "upheat";
+  src: url("../assets/fonts/upheavtt.ttf");
+}
+
+@font-face {
+  font-family: "pixellari";
+  src: url("../assets/fonts/Pixellari.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fee6ce;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main h3 {
+  color: #eab992;
+  margin-bottom: 3vh;
+  font-family: upheat;
+  font-size: 4em;
+  letter-spacing: .2rem;
+}
+
+#main .snake-panel {
+  height: 80vh;
+  width: 70vw;
+  background: #eecaa8;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 50px 0 50px;
+}
+
+@media screen and (min-width: 768px) {
+  #main .snake-panel {
+    width: 50vw;
+  }
+}
+
+#main .snake-panel a img {
+  height: 80px;
+  width: auto;
+  -webkit-filter: drop-shadow(5px 5px 0px #d99378);
+          filter: drop-shadow(5px 5px 0px #d99378);
+}
+
+#main .snake-panel a p {
+  text-align: center;
+  font-family: Kanit;
+  color: #ac8369;
+}
+
+#main .snake-panel #gameCanvas {
+  position: absolute;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+#main .snake-panel #score {
+  position: absolute;
+  z-index: 2;
+  margin-left: 45vw;
+  font-family: Kanit;
+  font-size: 2em;
+  font-weight: normal;
+  color: #ac8369;
+}
+
+#main .description h5 {
+  margin-top: 3vh;
+  font-family: pixellari;
+  color: #eab992;
+  font-size: 1.8em;
+  font-weight: normal;
+}
+
+#main .description p {
+  font-family: Kanit;
+  color: #eab992;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

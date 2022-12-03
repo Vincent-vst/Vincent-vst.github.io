@@ -1,0 +1,467 @@
+/* *{ */
+/* 	border : 1px solid red; */ 
+/* } */
+
+/* .films{ */
+/* 	background-color : red; */ 
+/* } */
+
+/*------------------------------ Colors and Fonts ------------------------------*/ 
+
+:root{
+	--background : #262626; 
+	--font : #fefefe; 
+	--description : #545454; 
+	--card-background : #222222; 
+	--phone-contour : #1b1b1b; 
+}
+
+*{
+	margin : 0;
+	padding : 0;
+}
+
+body {
+	background-color : var(--background);
+}
+
+
+/*------------------------------ Menu ------------------------------*/ 
+
+header{
+	/* border : 1px dashed green; */ 
+	display : flex; 
+	justify-content : space-between; 
+	margin : 20px 50px 0 50px; 
+	color : var(--font);
+}
+
+header h3{
+	font-size : 20px; 
+}
+
+header h3 a {
+	color : var(--font);
+	text-decoration: none;
+}
+
+header .menu {
+	display : flex;
+}
+
+header .menu p {
+	margin-left : 30px; 
+}
+
+header .menu p a {
+	color : var(--font);
+	text-decoration: none;
+}
+
+
+/*------------------------------ HomePage main ------------------------------*/ 
+
+#main {
+	/* border : 1px solid red;  */
+	height : 1200px; 
+}
+
+.title {
+	/* border : 1px solid blue; */ 
+	margin-top : 50px; 
+	height : 500px; 
+	display : flex; 
+	/* align-items : space-around; */ 
+	justify-content : center;
+}
+
+.title .text{
+	/* border : 1px dashed yellow; */ 
+	height : 400px; 
+	width : 400px; 
+	display : flex ; 
+	flex-direction : column; 
+	/* justify-content : center; */ 
+}
+
+.title .text h3{
+	margin-top : 100px; 
+	color : var(--font);
+	font-size : 40px; 
+}
+
+.title .text .description {
+	color : var(--description);
+	margin-top : 20px; 
+}
+
+.title .image{
+	/* border : 1px dashed orange;  */
+	width : 400px; 
+	height : 400px; 
+	display : flex; 
+	justify-content: center;
+	align-items: center;
+}
+
+.title .image img{
+	/* border : 1px solid red;  */
+	transform: scale(1.10);
+	-ms-transform: scale(1.10);
+	-webkit-transform: scale(1.10);
+}
+
+.title .text .button a {
+	margin-top : 50px; 
+	border : 1px solid white; 
+	width : 250px; 
+	height : 50px; 
+	border-radius : 25px; 
+	display : flex; 
+	justify-content : center; 
+	align-items : center; 
+	text-decoration : none; 
+	color : var(--font);
+}
+
+.title .text .button a:hover{
+	background-color : var(--font);
+	color : black; 
+}
+
+/* .title .text .button a {
+
+}
+
+.title .text .button a:hover{
+	color : black; 
+} */
+
+.line_parent{
+	display: flex;
+	justify-content: center;
+}
+
+.line{
+	width: 300px;
+	border : 1px solid var(--description);
+}
+
+.film_parent{
+	/* border : 1px solid yellow; */
+	margin-top : 50px; 
+	display : flex; 
+	/* justify-content: space-around; */
+	justify-content: center;
+}
+
+#films {
+	margin-top :  50px;
+	border : 3px solid var(--phone-contour) ; 
+	-webkit-box-shadow: 0px 0px 28px -7px #000000; 
+	box-shadow: 0px 0px 28px -7px #000000;
+	border-radius: 20px;
+	height : 500px;
+	width : 300px; 
+	/* margin : 50px;  */
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	flex-direction: column;
+	overflow: scroll;
+	/* margin-right : 80px;  */
+	/* display: flex; */
+}
+
+.film_item {
+	/* margin-right : 50px;  */
+	/* border : 1px solid red;  */
+	margin-top: 30px;
+	background-color : var(--card-background);
+	display : flex; 
+	flex-direction : column;
+	justify-content : flex-end; 
+	align-items : center; 
+	height : 300px; 
+	width : 250px; 
+}
+
+.film_item h3 a {
+	text-decoration: underline;
+	color : var(--font);
+	font-size: 25px;
+}
+
+.film_item p {
+	color : var(--font); 
+
+}
+
+.film_item img{
+	height : 300px; 
+	width : auto; 
+}
+
+.text_parent{
+	/* border : 1px solid green; */
+	margin-left : 80px; 
+	width : 400px; 
+}
+
+.text_description h3{
+	margin-top: 100px ;
+	color : var(--font);
+	font-size : 30px; 
+}
+
+.text_description p {
+	margin-top : 30px; 
+	color : var(--description);
+}
+
+.text_description span {
+	margin-top : 50px; 
+	background-color: white;
+	width : 100px; 
+	height : 30px; 
+	border-radius : 25px; 
+	display : flex; 
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.image_description{
+	margin-top : 50px; 
+	margin-left : 50px; 
+	/* border : 1px solid red;  */
+	height: 200px;
+	width : auto;
+}
+
+
+/*------------------------------ Footer ------------------------------*/ 
+
+
+
+footer{
+	/* border : 1px solid red;  */
+	height : 100px; 
+	/* position:absolute; */
+	bottom : 0; 
+	/* margin-top : 300px;  */
+	display  : flex; 
+	align-items : flex-end; 
+	justify-content : space-between; 
+}
+
+.left_footer {
+	margin : 0 0 30px 20px ;
+	/* margin : 20px; */
+	color : var(--description);
+}
+
+.right_footer{
+	display : flex; 
+}
+
+footer .icon {
+	margin : 20px; 
+	height : 50px; 
+	width : 50px; 
+	/* background-color : var(--description); */
+	border-radius : 50%;
+}
+
+footer .icon img{
+	height : 50px; 
+	width : auto; 
+}
+
+
+/*------------------------------ Form Page ------------------------------*/ 
+
+#form_panel {
+	margin : 100px; 
+	/* border : 1px solid red;  */
+	display : flex; 
+	flex-direction: column;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	/* color : var(--font); */
+}
+
+
+
+.gradient_border {
+	--borderWidth: 3px;
+	background: #1D1F20;
+	position: relative;
+	border-radius: var(--borderWidth);
+}
+
+.gradient_border:after {
+	content: '';
+	position: absolute;
+	top: calc(-1 * var(--borderWidth));
+	left: calc(-1 * var(--borderWidth));
+	height: calc(100% + var(--borderWidth) * 2);
+	width: calc(100% + var(--borderWidth) * 2);
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border-radius: calc(2 * var(--borderWidth));
+	z-index: -1;
+	animation: animatedgradient 3s ease alternate infinite;
+	background-size: 300% 300%;
+}
+  
+  
+@keyframes animatedgradient {
+	  0% {
+		  background-position: 0% 50%;
+	}
+	  50% {
+		  background-position: 100% 50%;
+	}
+	  100% {
+		  background-position: 0% 50%;
+	}
+}
+
+#form_panel h1{
+	color : var(--font);
+	font-size: 50px;
+}
+
+.nom {
+	margin-top : 50px; 
+	color : var(--font);
+}
+
+.nom input {
+	border : 1px solid black; 
+	margin-left: 10px;
+	background-color: var(--background);
+	border-radius: 10px;
+	height: 25px;
+	color : var(--font);
+}
+
+.note_parent{
+	/* border : 1px solid red;  */
+	display: flex;
+	margin-top : 30px; 
+}
+
+.note {
+	color : var(--font);
+}
+
+.note_parent p {
+	margin-left: 10px;
+	color : var(--description);
+}
+
+.note input{
+	border : 1px solid black; 
+	margin-left: 10px;
+	background-color: var(--background);
+	border-radius: 10px;
+	width : 50px; 
+	height: 25px;
+	color : var(--font); 
+}
+
+#form_panel .button{
+	margin-top : 30px; 
+	border : 1px solid white; 
+	width : 250px; 
+	height : 50px; 
+	border-radius : 25px; 
+	display : flex; 
+	justify-content : center; 
+	align-items : center; 
+	text-decoration : none; 
+	color : var(--font);
+}
+
+
+
+#form_panel .button button {
+	background-color: #1D1F20;
+	border : none; 
+	text-decoration: underline;
+	color : var(--font);
+}
+
+
+/*------------------------------ Description Page ------------------------------*/ 
+
+
+#description_panel {
+	/* border : 1px solid red;  */
+	height : 500px; 
+	display : flex; 
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin : 80px; 
+}
+
+.delete_form{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: flex-end; */
+	align-items: flex-start;
+	/* border : 1px dashed green;  */
+	width : 500px; 
+	color : var(--description);
+}
+
+.delete_form input {
+	/* border : 2px solid red;  */
+	background-color: var(--card-background);
+	margin : 10px; 
+	border : 1px solid var(--phone-contour);
+	width : 50px; 
+	/* border-color: var(--phone-contour); */
+	border-radius: 10px;
+	color : var(--font);
+	outline : none; 
+}
+
+.delete_form button {
+	/* border : 1px solid red;  */
+	background-color: var(--card-background);
+	border : 1px solid white; 
+	border-radius: 20px;
+	padding: 5px 10px 5px 10px;
+	color : var(--font);
+}
+
+.delete_form button:hover{
+	background-color: var(--font);
+	color : var(--background);
+}
+
+#description_panel h1{
+	font-size: 100px;
+	color : var(--font);
+
+}
+
+.description{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: flex-end; */
+	align-items: flex-end;
+	/* border : 1px dashed green;  */
+	width : 500px; 
+}
+
+.description p {
+	/* border : 1px dashed yellow;  */
+	width: 300px ;
+	color : var(--description);
+}

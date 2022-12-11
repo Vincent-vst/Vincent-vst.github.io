@@ -1,0 +1,321 @@
+$background: #171721
+$light-background: #22222c
+$lighter-background: #2b2b37
+$salmon: #ef7868
+$light-blue: #a8ded8
+$orange: #fbbb5a
+$pink: #f3c7ec
+$dark-blue: #17aff8
+$white: #f7f6f8
+$hover-font: #bdbcbc
+$grey: #797981
+
+@font-face
+    font-family: "ubuntu"
+    src: url('assets/Ubuntu-regular.ttf')
+
+*
+    margin: 0
+    padding: 0
+
+body
+    background-color: $background
+    color: $white
+    display: flex
+    cursor: none
+
+    .cursor
+        position: fixed
+        width: 50px
+        height: 50px
+        border: 1px solid #c6c6c6
+        border-radius: 50%
+        left: 0
+        top: 0
+        pointer-events: none
+        transform: translate(-50%, -50%)
+        transition: .05s
+
+    .cursor2
+        position: fixed
+        width: 8px
+        height: 8px
+        background-color: #c6c6c6
+        border-radius: 50%
+        left: 0
+        top: 0
+        pointer-events: none
+        transform: translate(-50%, -50%)
+        transition: .15s
+
+    nav
+
+        margin: 10px
+        width: 20vw
+        display: flex
+        flex-direction: column
+        .logo
+            display: flex
+
+            img
+                width: 50px
+
+            h3
+                margin-top: 10px
+                margin-left: 10px
+                font-family: ubuntu
+
+        a
+            color: $grey
+            margin-left: 10px
+            margin-top: 40px
+            text-decoration: none
+            font-family: ubuntu
+            transition: color 0.15s
+
+            &:hover
+                color: $white
+
+            img
+                width: 30px
+                filter: invert(0.5)
+                padding-right: 10px
+
+        .cat-animation
+            margin-top: 80px
+            img
+                width: 100px
+
+        @media screen and (min-width : 1500px)
+            // border : 3px solid yellow
+            width: 15vw
+
+    main
+        width: 80vw
+        font-family: ubuntu
+        // border : 1px solid green
+
+        @media screen and (min-width : 1500px)
+            width: 85vw
+
+        menu
+            margin-top: 10px
+            display: flex
+            justify-content: space-between
+            padding-bottom: 10px
+            border-bottom: 1px solid $lighter-background
+
+            a
+                display: flex
+                text-decoration: none
+
+                img
+                    margin: 10px 10px 0 0
+                    width: 30px
+                    height: 30px
+                    filter: invert(1)
+                h2
+                    margin-top: 10px
+                    color: $white
+
+            ul
+                display: flex
+                // border : 1px solid red 
+                width: 40vw
+                justify-content: space-around
+
+                @media screen  and (min-width: 1500px)
+                    width: 30vw
+
+                li
+                    display: flex
+                    align-items: center
+
+                    a
+                        color: $hover-font
+                        transition: color 0.5s
+
+                        &:hover
+                            color: $white
+
+                    img
+                        width: 40px
+                        border-radius: 50%
+
+                    p
+                        margin-left: 10px
+                        color: $hover-font
+                        transition: color 0.5s
+
+                        &:hover
+                            color: $white
+
+        #home
+
+            margin-right: 20px
+
+            .metrics-row
+                margin-top: 50px
+                // border : 1px solid blue
+                height: 300px
+
+                h3
+                    // color : red
+                    color: $white
+
+                .overview
+                    display: flex
+                    justify-content: space-around
+                    margin-top: 70px
+                    background-color: $light-background
+                    border-radius: 20px
+                    filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.20))
+                    // border : 1px solid green
+                    transition: filter 0.5s
+
+                    &:hover
+                        filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.60))
+
+                    .data
+                        width: 15vw
+                        height: 150px
+                        // background-color: $light-background
+                        border-radius: 20px
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+
+                        img
+                            width: 30px
+                            margin-bottom: 10px
+
+                        p
+                            margin-bottom: 10px
+
+                        .button
+                            // border : 1px solid red 
+                            padding: 5px 10px 5px 10px
+                            border-radius: 20px
+                            background-color: $salmon
+                            transition: filter 0.15s
+
+                            &:hover
+                                filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.90))
+                                // border : 1px solid red
+
+                        a
+                            color: $white
+                            text-decoration: none
+
+                    .bar
+                        margin-top: 10px
+                        border-left: 1px solid $grey
+                        height: 120px
+
+            .graph-row
+                // border : 2px dashed purple 
+                display: flex
+                height: 450px
+
+                .water-graph
+                    // border : 1px solid green
+                    width: 50%
+
+                    h4
+                        text-decoration: none
+
+                    #curve-chart
+                        // border : 1px solid blue
+                        background: $light-background
+                        height: 95%
+                        margin: 10px
+                        border-radius: 20px
+                        filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.20))
+                        transition: filter 0.5s
+
+                        &:hover
+                            filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.60))
+
+                .element-graph
+                    // border : 1px solid yellow
+                    width: 50%
+
+                    .pie-chart
+                        // border : 1px solid yellow 
+                        display: flex
+                        width: 100%
+                        height: 50%
+
+                        #pie-chart-soil
+                            // border : 1px solid red 
+                            width: 50%
+                            background: $light-background
+                            margin: 10px
+                            border-radius: 20px
+                            filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.20))
+                            transition: filter 0.5s
+
+                            &:hover
+                                filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.60))
+
+                        #pie-chart-light
+                            // border : 1px solid green 
+                            width: 50%
+                            background: $light-background
+                            margin: 10px
+                            border-radius: 20px
+                            filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.20))
+                            transition: filter 0.5s
+
+                            &:hover
+                                filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.60))
+
+                    #cloud-chart-temperature
+                        // border : 1px solid pink
+                        height: 45%
+                        background: $light-background
+                        margin: 10px
+                        border-radius: 20px
+                        filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.20))
+                        transition: filter 0.5s
+
+                        &:hover
+                            filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.60))
+
+            .underline-animation
+                display: inline-block
+                position: relative
+
+                &:after
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    transform: scaleX(0)
+                    height: 1px
+                    bottom: -5px
+                    left: 0
+                    background-color: $white
+                    transform-origin: bottom right
+                    transition: transform 0.25s ease-out
+
+                &:hover::after
+                    transform: scaleX(1)
+                    transform-origin: bottom left
+
+    #cloud-chart-page
+        // border : 1px solid red 
+        width: 100vw
+        height: 100vh
+
+    #humidity-chart-page
+        width: 100vw
+        height: 100vh
+
+    #light-chart-page
+        width: 100vw
+        height: 100vh
+
+    #soil-chart-page
+        width: 100vw
+        height: 100vh

@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "ubuntu";
+  src: url("assets/Ubuntu-regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #171721;
+  color: #f7f6f8;
+  display: flex;
+  cursor: none;
+}
+body .cursor {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.05s;
+}
+body .cursor2 {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.15s;
+}
+body nav {
+  margin: 10px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+body nav .logo {
+  display: flex;
+}
+body nav .logo img {
+  width: 50px;
+}
+body nav .logo h3 {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: ubuntu;
+}
+body nav a {
+  color: #797981;
+  margin-left: 10px;
+  margin-top: 40px;
+  text-decoration: none;
+  font-family: ubuntu;
+  transition: color 0.15s;
+}
+body nav a:hover {
+  color: #f7f6f8;
+}
+body nav a img {
+  width: 30px;
+  filter: invert(0.5);
+  padding-right: 10px;
+}
+body nav .cat-animation {
+  margin-top: 80px;
+}
+body nav .cat-animation img {
+  width: 100px;
+}
+@media screen and (min-width: 1500px) {
+  body nav {
+    width: 15vw;
+  }
+}
+body main {
+  width: 80vw;
+  font-family: ubuntu;
+}
+@media screen and (min-width: 1500px) {
+  body main {
+    width: 85vw;
+  }
+}
+body main menu {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2b2b37;
+}
+body main menu a {
+  display: flex;
+  text-decoration: none;
+}
+body main menu a img {
+  margin: 10px 10px 0 0;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
+body main menu a h2 {
+  margin-top: 10px;
+  color: #f7f6f8;
+}
+body main menu ul {
+  display: flex;
+  width: 40vw;
+  justify-content: space-around;
+}
+@media screen and (min-width: 1500px) {
+  body main menu ul {
+    width: 30vw;
+  }
+}
+body main menu ul li {
+  display: flex;
+  align-items: center;
+}
+body main menu ul li a {
+  color: #bdbcbc;
+  transition: color 0.5s;
+}
+body main menu ul li a:hover {
+  color: #f7f6f8;
+}
+body main menu ul li img {
+  width: 40px;
+  border-radius: 50%;
+}
+body main menu ul li p {
+  margin-left: 10px;
+  color: #bdbcbc;
+  transition: color 0.5s;
+}
+body main menu ul li p:hover {
+  color: #f7f6f8;
+}
+body main #home {
+  margin-right: 20px;
+}
+body main #home .metrics-row {
+  margin-top: 50px;
+  height: 300px;
+}
+body main #home .metrics-row h3 {
+  color: #f7f6f8;
+}
+body main #home .metrics-row .overview {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  background-color: #22222c;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.2));
+  transition: filter 0.5s;
+}
+body main #home .metrics-row .overview:hover {
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.6));
+}
+body main #home .metrics-row .overview .data {
+  width: 15vw;
+  height: 150px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main #home .metrics-row .overview .data img {
+  width: 30px;
+  margin-bottom: 10px;
+}
+body main #home .metrics-row .overview .data p {
+  margin-bottom: 10px;
+}
+body main #home .metrics-row .overview .data .button {
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  background-color: #ef7868;
+  transition: filter 0.15s;
+}
+body main #home .metrics-row .overview .data .button:hover {
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.9));
+}
+body main #home .metrics-row .overview .data a {
+  color: #f7f6f8;
+  text-decoration: none;
+}
+body main #home .metrics-row .overview .bar {
+  margin-top: 10px;
+  border-left: 1px solid #797981;
+  height: 120px;
+}
+body main #home .graph-row {
+  display: flex;
+  height: 450px;
+}
+body main #home .graph-row .water-graph {
+  width: 50%;
+}
+body main #home .graph-row .water-graph h4 {
+  text-decoration: none;
+}
+body main #home .graph-row .water-graph #curve-chart {
+  background: #22222c;
+  height: 95%;
+  margin: 10px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.2));
+  transition: filter 0.5s;
+}
+body main #home .graph-row .water-graph #curve-chart:hover {
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.6));
+}
+body main #home .graph-row .element-graph {
+  width: 50%;
+}
+body main #home .graph-row .element-graph .pie-chart {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+body main #home .graph-row .element-graph .pie-chart #pie-chart-soil {
+  width: 50%;
+  background: #22222c;
+  margin: 10px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.2));
+  transition: filter 0.5s;
+}
+body main #home .graph-row .element-graph .pie-chart #pie-chart-soil:hover {
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.6));
+}
+body main #home .graph-row .element-graph .pie-chart #pie-chart-light {
+  width: 50%;
+  background: #22222c;
+  margin: 10px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.2));
+  transition: filter 0.5s;
+}
+body main #home .graph-row .element-graph .pie-chart #pie-chart-light:hover {
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.6));
+}
+body main #home .graph-row .element-graph #cloud-chart-temperature {
+  height: 45%;
+  background: #22222c;
+  margin: 10px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.2));
+  transition: filter 0.5s;
+}
+body main #home .graph-row .element-graph #cloud-chart-temperature:hover {
+  filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.6));
+}
+body main #home .underline-animation {
+  display: inline-block;
+  position: relative;
+}
+body main #home .underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: #f7f6f8;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+body main #home .underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+body #cloud-chart-page {
+  width: 100vw;
+  height: 100vh;
+}
+body #humidity-chart-page {
+  width: 100vw;
+  height: 100vh;
+}
+body #light-chart-page {
+  width: 100vw;
+  height: 100vh;
+}
+body #soil-chart-page {
+  width: 100vw;
+  height: 100vh;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>greenhouse</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="logo">
+            <img src="assets/tea.png" alt="logo">
+            <h3>Greenhouse</h3>
+        </div>
+        <a href="index.html"><img src="assets/accueil.png" alt="home">Home</a>
+        <a href="html/temperature.html"><img src="assets/temperature.png" alt="temperature">Temperature</a>
+        <a href="html/humidity.html"><img src="assets/humidity.png" alt="humidity">Humidity</a>
+        <a href="html/light.html"><img src="assets/light.png" alt="light">Light</a>
+        <a href="html/soil.html"><img src="assets/ground.png" alt="soil">Soil</a>
+        <div class="cat-animation">
+            <img src="assets/cat.gif" alt="cat animation">
+        </div>
+    </nav>
+    <main id="main">
+        <menu>
+            <a id="menu-button" href="javascript:void(0)" ><img src="assets/menu.png" alt="menu"><h2>Monitoring system</h2></a>
+            <ul>
+                <li><a href="https://github.com/Vincent-vst" target="_blank">Code</a></li>
+                <li><a href="https://github.com/Vincent-vst" target="_blank">Api</a></li>
+                <li>
+                    <img src="assets/pfp.png" alt="pfp">
+                    <p><a href="https://github.com/Vincent-vst" target="_blank">Yuto</a></p>
+                </li>
+            </ul>
+        </menu>
+        <div id="home">
+            <div class="metrics-row">
+                <h3 class="underline-animation">Dashboard</h3>
+                <div class="overview">
+                    <div class="data">
+                        <img src="assets/hot.png" alt="thermometer">
+                        <p>27°C</p>
+                        <a href="html/temperature.html" class="button">find more</a>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="data">
+                        <img src="assets/drops.png" alt="water drop">
+                        <p>70%</p>
+                        <a href="html/humidity.html" class="button">find more</a>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="data">
+                        <img src="assets/light-bulb.png" alt="light bulb">
+                        <p>20%</p>
+                        <a href="html/light.html" class="button">find more</a>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="data">
+                        <img src="assets/plant.png" alt="soil">
+                        <p>pH 6</p>
+                        <a href="html/soil.html" class="button">find more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="graph-row">
+                <div class="water-graph">
+                    <h4 class="underline-animation">water graph</h4>
+                    <div id="curve-chart"></div>
+                </div>
+                <div class="element-graph">
+                    <h4 class="underline-animation">details</h4>
+                    <div class="pie-chart">
+                        <div id="pie-chart-soil"></div>
+                        <div id="pie-chart-light"></div>
+                    </div>
+                    <div id="cloud-chart-temperature"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

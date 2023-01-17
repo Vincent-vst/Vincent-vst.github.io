@@ -37,5 +37,3 @@ Most of those websites are under an MIT or GNU license.
 
 - [x] : Greenhouse dashboard
 - [ ] : Greenhouse API 
-- [ ] : Skyblog thingy 
-- [ ] : Wikipedia css 
